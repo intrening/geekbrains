@@ -89,13 +89,13 @@ print(s)
 # Кол-во часов, которые были отработаны, указаны в файле "data/hours_of"
 
 d = {}
-with open ('/Users/nick/Documents/GitHub/geekbrains/data/workers','r',encoding='utf-8') as inf:
+with open ('data/workers','r',encoding='utf-8') as inf:
     inf.readline()
     for s in inf:
         s = s.split()
         d[s[0] + ' ' + s[1]] = s[2],s[4]
 
-with open ('/Users/nick/Documents/GitHub/geekbrains/data/hours_of','r',encoding='utf-8') as inf:
+with open ('data/hours_of','r',encoding='utf-8') as inf:
     inf.readline()
     for s in inf:
         s = s.split()
