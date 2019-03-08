@@ -138,3 +138,5 @@ for key in d.keys():
         with open (s, 'w', encoding='utf-8') as inf:
             for i in d[key]:
                 inf.write(i + '\n')
+
+                    
