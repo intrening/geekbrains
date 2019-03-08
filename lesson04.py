@@ -1,3 +1,4 @@
+#Волосянков Николай
 # Задание:
 # Эта программа являет собой упрощенный симулятор банкомата, пользователь вводит номер карты и пин код,
 # в случае успеха программа предлагает меню для выбора действий, где он может проверить счет, или снять деньги.
@@ -10,8 +11,9 @@
 person1 = {'card': 4276123465440000, 'pin': 9090, 'money': 100.90}
 person2 = {'card': 4276123465440001, 'pin': 9091, 'money': 200.90}
 person3 = {'card': 4276123465440002, 'pin': 9092, 'money': 300.90}
+person4 = {'card': 111, 'pin': 222, 'money': 300.90}
 
-bank = [person1, person2, person3]
+bank = [person1, person2, person3, person4]
 
 def get_person_by_card(card_number):
     for person in bank:
@@ -30,7 +32,7 @@ def check_account(person):
  
  
 def withdraw_money(person, money):
-    if person['money'] - money < 0:
+    if person['money'] - money >= 0:
         person['money'] -= money
         return 'Вы сняли {} рублей.'.format(money)
     else:
@@ -39,11 +41,15 @@ def withdraw_money(person, money):
  
 def process_user_choice(choice, person):
     if choice == 1:
-        print(check_account(person))
+        print('Баланс счета:' + str (check_account(person)))
     elif choice == 2:
         while True:
             try:
                 count = float(input('Сумма к снятию:'))
+                if count > 0:
+                    break
+                else:
+                    print ('Введите корректную сумму') 
             except ValueError:
                 print ('Ошибка ввода, введите корректную сумму') 
         print(withdraw_money(person, count))
