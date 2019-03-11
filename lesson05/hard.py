@@ -28,6 +28,10 @@ def print_help():
     print("help - получение справки")
     print("mkdir <dir_name> - создание директории")
     print("ping - тестовый ключ")
+    print("cp <file_name> - создает копию указанного файла")
+    print("rm <file_name> - удаляет указанный файл")
+    print("cd <full_path or relative_path> - меняет текущую директорию на указанную")
+    print("ls - отображение полного пути текущей директории")
 
 
 def make_dir():
@@ -45,10 +49,42 @@ def make_dir():
 def ping():
     print("pong")
 
+def copy_file():
+    if not dir_name:
+        print("Необходимо указать имя файла вторым параметром")
+        return
+    with open (dir_name,"r") as inf:
+        f = inf.read()
+    with open (dir_name + "_copy","w") as inf:
+        inf.write(f)
+
+def remove_file():
+    if not dir_name:
+        print("Необходимо указать имя файла вторым параметром")
+        return
+    if input ("Будет удален файл "+ dir_name +"\nВы уверены?(Y/N): ") =="Y":
+        os.remove(dir_name)
+
+def change_dir():
+    try:
+        os.chdir(dir_name)
+    except FileNotFoundError:
+        print ("Ошибка директории")
+
+
+def ls_dir():
+    print ('Текущая директория:')
+    print (os.getcwd())
+
 do = {
     "help": print_help,
     "mkdir": make_dir,
-    "ping": ping
+    "ping": ping,
+    "cp": copy_file,
+    "rm": remove_file,
+    "cd": change_dir,
+    "ls": ls_dir
+
 }
 
 try:
