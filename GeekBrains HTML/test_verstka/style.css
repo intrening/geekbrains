@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,700');
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.slider {
+    height: 800px;
+    background-image: url("img/slider-img.jpg")
+}
+
+.logo {
+    margin-top: 63px;
+    margin-left: 98px;
+}
+
+.menu {
+    float: right;
+    margin-right: 211px;
+    margin-top: 67px;
+}
+
+.menu li {
+    float: left;
+    list-style-type: none;
+}
+
+.menu li a {
+    font-family: Montserrat;
+    /* Встроенный стиль */
+    color: #8c8c8c;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 48px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+}
+
+.menu li a:hover {
+    color: #212121;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+}
+
+.text {
+    font-family: Montserrat;
+    width: 490px;
+    margin-top: 283px;
+    margin-left: 98px;
+    float: left;
+}
+
+.green_h3 {
+    color: #43a047;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    /*line-height: 48px; Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.text h1 {
+    color:  #212121;
+    font-size: 62px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 100;
+    line-height: 72px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin-bottom: 34px;
+
+}
+
+.text p {
+    color: #6c6c6c;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    /*line-height: 24px; Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin-bottom: 32px;
+
+}
+
+.order {
+    background: #ffffff;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
+    width: 212px;
+    height: 45px;
+    border-radius: 22px;
+    text-align: center;
+    line-height: 45px;
+    color: #212121;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+}
+
+.order:hover {
+    background: #ffffff url("img/arrow.png") no-repeat 173px 16px;
+
+}
+
+.featured {
+    width: 1171px;
+    height: 369px;
+    margin: 120px 98px;
+
+    clear: both;
+}
+
+.tab-control {
+    border-bottom: 1px solid #000;
+    float: left;
+}
+
+.active {
+    text-decoration: none;
+    font-family: Montserrat;
+    color: #212121;
+    font-size: 36px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: left;
+    margin-inline-end: 15px;
+}
+
+.notactive {
+    text-decoration: none;
+    font-family: Montserrat;
+    color: #6c6c6c;
+    font-size: 36px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: left;
+    margin-inline-end: 15px;
+}
+
+.tab-control a:hover {
+    text-decoration: underline;
+}
+
+.explore {
+    text-decoration: none;
+    font-family: Montserrat;
+    color: #212121;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: right;
+    display: block;
+    padding-top: 20px;
+}
+
+.tab-content {
+    margin-top: 72px;
+}
+
+.product {
+    display: inline;
+}
+
+.product img {
+    margin-right: 15px;
+}
+
+.product img:hover {
+    border-width: 1px;
+    border-color: #9c9c9c;
+    border-style: solid;
+    background-color: #ffffff;
+    opacity: 0.9;
+    width: 268px;
+    height: 268px;
+}
+
+.promo-product {
+    margin-top: 120px;
+    height: 683px;
+}
+
+.promo-content {
+    width: 683px;
+    height: 683px;
+    float: left;
+}
+
+.promo-text {
+    margin: 30% 51px;
+    font-family: Montserrat;
+    width: 374px;
+}
+
+.promo-text h3 {
+    color: #1e88e5;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 48px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+h1 {
+    font-family: Montserrat;
+    color: #212121;
+    font-size: 36px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.promo-text p {
+    color: #6c6c6c;
+    font-size: 13.99px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    transform: scaleY(1.0022);
+    /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */
+    margin-bottom: 30px;
+}
+
+.trending-products {
+    margin: 119px 98px 0px;
+    height: 865px;
+}
+
+.tab-trending {
+    float: left;
+}
+
+.products {
+    margin-top: 64px;
+}
+
+.products img {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.navigation {
+    background-image: url("img/navi.png");
+    width: 120px;
+    height: 40px;
+    margin: 651px 623px;
+}
+
+.navi_active {
+    border-radius: 50%;
+    background-color: #212121;
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+.slider_hot {
+    height: 800px;
+    background-image: url("img/slider.jpg");
+    margin-top: 120px;
+    float: left;
+}
+.h3_red {
+    color: #e53935;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 48px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+.exclusive-product{
+    margin: 120px 98px;
+    float: left;
+}
+.exclusive-content-big{
+    width: 570px;
+    height: 570px;
+    float:left;
+}
+.exclusive-content-small {
+    display: inline;
+}
+.exclusive-content-small img {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.mobile {
+    margin-top: 120px;
+    background-image: url("img/back-img.jpg");
+    background-repeat: no-repeat;
+    font-family: Montserrat;
+    clear: both;
+    padding: 125px 99px;
+}
+
+.mobile h3 {
+    color:  #6c6c6c;
+    font-size: 18px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 48px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+.mobile h1{
+    color:  #212121;
+    font-size: 62px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 100;
+    line-height: 72px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    width: 570px;
+}
+.mobile p{
+    color:  #6c6c6c;
+    font-size: 22px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 24px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin-bottom: 33px
+
+}
+.footer{
+    font-family: Montserrat;
+    position: relative;
+    margin: 120px 99px;
+    height: 384px;
+}
+.footer h3{
+    color:  #6c6c6c;
+    font-size: 18px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 24px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.contact {
+    width: 300px;
+    float: left;
+    
+}
+.useful {
+    width: 413px;
+    float: left;
+}
+.touch{
+    width: 413px;
+    float: left;
+}
+
+.footer-menu{
+    list-style-type: none;
+    float: left;
+    width: 187px;
+}
+.footer-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:  #212121;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 26px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+.touch input {
+    border-width: 1px;
+    border-color:  #d9dee1;
+    border-style: solid;
+    background-color:  #ffffff;
+    width: 368px;
+    height: 46px;
+    font-family: Montserrat;
+    color:  #6c6c6c;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 22px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    padding: 10px;
+}
+.copy{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    color:  #6c6c6c;
+    font-size: 12px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 26px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    padding-top: 77px;
+    clear: both;
+}
+.copy a{
+    text-decoration: none;
+    color:  #6c6c6c;
+    font-size: 12px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 26px;/* Приближение из-за подстановки шрифтов */
+    text-align: right;
+    display: block;
+    float: left;
+}
+.copy img{
+    margin: 0px 150px;
+    display: block;
+    float: left;
+}
+.copy p{
+    display: block;
+    float: left;
+}

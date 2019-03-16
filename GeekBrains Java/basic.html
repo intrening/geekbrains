@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script>
+    function rand(min,max)
+    {
+        return (parseInt(Math.random()*(max-min+1)+min));
+    }    
+    function getCard()
+    {
+        var cards=['6','7','8','9','10','J','Q','K','A'];
+        var r=rand(0,8);
+        var ret=cards[r];
+        return (ret);
+
+    }
+    function getSum(a)
+    {
+        var cards=['6','7','8','9','10','J','Q','K','A'];
+        var sum=0
+        for (var i=0; i<a.length();i++;){
+            
+        }
+    }
+    var dealer=[getCard()];
+    var player=[getCard()];
+    alert ('Дилер: ' + dealer.join(' ')+ ' Игрок: ' + player.join(' '));
+
+</script>
