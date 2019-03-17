@@ -156,4 +156,4 @@ class Game():
 
         self.restart()
 
-g = Game()
+g = Game() 
