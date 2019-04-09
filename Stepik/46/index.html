@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // BEGIN (write your solution here)
+        var solution = function (str) {
+            let result = '';
+            let arr = str.split(' ');
+            for (let i = 0; i < arr.length; i++) {
+                let word = arr[i][0].toUpperCase();
+                for (let j = 1; j < arr[i].length; j++) {
+                    word += arr[i][j];
+                }
+                result += word + ' ';
+            }
+            return result;
+        }
+        console.log(solution('hello, world!'));
+        // END
+    </script>
+
+</body>
+
+</html>
