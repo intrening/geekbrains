@@ -9,7 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Lesson 05</title>
+    <title>Lesson 06</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer> </script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -41,20 +43,21 @@
         </nav>
     </div>
     <div class="container">
-        <h1 class="mt-5">Задание №1</h1>
-        <p class="lead">Есть кнопка button рядом с ней есть текст (Hello) необходимо при нажатии на кнопку поменять
-            текст кнопки на (Привет)
+        <h1 class="mt-5">Задание №6</h1>
+        <p class="lead">
+            1)** Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по своему
+            желанию. Доска должна быть разлинована соответствующим образом, т.е.
+            чередовать черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы
+            – латинскими буквами A, B, C, D, E, F, G, H.<br>
+            2) *Заполнить созданную таблицу буквами, отвечающими за шахматную фигуру, например К-
+            король, Ф – ферзь и тп., причем все фигуры должны стоять на своих местах и быть
+            соответственно черными и белыми.<br>
+            3) * Заменить буквы, обозначающие фигуры картинками.<br>
         </p>
-        <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Отправить</button>
+        <div id = "cells"></div>
 
-        <div id="text">(Hello)</div>
-        <script>
-            function changeHello() {
-                var text = document.getElementById("text");
-                text.innerHTML = '(Привет)';
-                return false;
-            }
-        </script>
+        
+
     </div>
     </form>
 

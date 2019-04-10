@@ -1,36 +1,41 @@
-var size_cells = 8;
-window.onload = gameLoad;
+var cells = [
+    ['R_B','N_B','B_B','Q_B','K_B','B_B','N_B','R_B'],
+    ['P_B','P_B','P_B','P_B','P_B','P_B','P_B','P_B'],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['P_W','P_W','P_W','P_W','P_W','P_W','P_W','P_W'],
+    ['R_W','N_W','B_W','Q_W','K_W','B_W','N_W','R_W']
+];
 
-
-function gameLoad(){
-    renderCells();
-    renderFigures();
-}
-
-function renderFigures(){
-    let lines = document.getElementsByClassName('line');
-    for (let i in lines.namedItem){
-        console.log(i);
-    }
-}
+renderCells();
 
 function renderCells(){
     let line;
-    createLineLetters (size_cells);
-    for (let i = 0; i < size_cells; i ++){
+    let cell;
+    createLineLetters (cells[0].length);
+    for (let i = 0; i < cells.length; i ++){
         line = createLine();
-        createCell(line, i+1);
-        for (let j = 0; j < size_cells; j++){
-            createCell(line, (j+i) % 2 ==0? 'white':'black');
+
+        cell = createCell('name',i+1);
+        line.appendChild(cell);
+        
+        for (let j = 0; j < cells[i].length; j++){
+            cell = createCell(cells[i][j],'',(j+i) % 2 ==0? 'white':'black');
+            line.appendChild(cell);
         }
     }
 }
 
-function createLineLetters(){
+function createLineLetters(size_cells){
     let line = createLine();
-    createCell(line, '');
+    cell = createCell('name','')
+    line.appendChild(cell);
+
     for (let i = 0; i < size_cells; i++){
-        createCell(line, 'name',String.fromCharCode(65+i));
+        cell = createCell('name',String.fromCharCode(65+i));
+        line.appendChild(cell);
     }
 }
 
@@ -43,18 +48,23 @@ function createLine(){
     return line;
 }
 
-function createCell (line, type, value,){
+function createCell (type, value, color){
     let cell = document.createElement('div');
-    cell.id = value;
     cell.classList.add('cell');
-
-    if (type == 'white'){
-        cell.classList.add('white');
-    } else if (type == 'black'){
-        cell.classList.add('black');
-    } else if (type == 'name'){
+    if (type == "name"){
         cell.classList.add('name');
         cell.innerHTML = value;
+        return cell;
+    } else if (type != ''){
+        cell.classList.add(type);
     }
-    line.appendChild (cell);
+
+    if (color == 'white'){
+        cell.classList.add('white');
+    } else if (color == 'black'){
+        cell.classList.add('black');
+    }
+
+    return cell;
 }
+

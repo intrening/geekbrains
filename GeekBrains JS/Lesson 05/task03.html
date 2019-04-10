@@ -41,18 +41,41 @@
         </nav>
     </div>
     <div class="container">
-        <h1 class="mt-5">Задание №1</h1>
-        <p class="lead">Есть кнопка button рядом с ней есть текст (Hello) необходимо при нажатии на кнопку поменять
-            текст кнопки на (Привет)
-        </p>
-        <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Отправить</button>
+        <h1 class="mt-5">Задание №3</h1>
+        <p class="lead">
+            Дан код<br>
+            &lt;h2>Заголовок.&lt;/h2><br>
+            &lt;ul><br>
+            &lt;li>list&lt;/li><br>
+            &lt;li>list&lt;/li><br>
+            &lt;li>list&lt;/li><br>
+            &lt;li>list&lt;/li><br>
+            &lt;/ul><<br>
+                Поменяйте содержимое списка на текст list их порядковый номер в коде.
 
-        <div id="text">(Hello)</div>
+        </p>
+        <code>
+        <h2>Заголовок.</h2>
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+    </code>
+        <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Поменять</button>
         <script>
             function changeHello() {
-                var text = document.getElementById("text");
-                text.innerHTML = '(Привет)';
+                var ul = document.getElementsByTagName('li');
+                for (var i in ul){
+                    if (ul[i].innerHTML == 'list'){
+                        ul[i].innerHTML = i;
+                    }
+                    console.log(i);
+                }
                 return false;
+
+
             }
         </script>
     </div>

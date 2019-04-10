@@ -41,20 +41,25 @@
         </nav>
     </div>
     <div class="container">
-        <h1 class="mt-5">Задание №1</h1>
-        <p class="lead">Есть кнопка button рядом с ней есть текст (Hello) необходимо при нажатии на кнопку поменять
-            текст кнопки на (Привет)
+        <h1 class="mt-5">Задание №5</h1>
+        <p class="lead">
+            Дан элемент ul, а в нем li #list. Вставьте перед элементом #list новую li с текстом 'Первый элемент
+            списка'<br>
         </p>
-        <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Отправить</button>
-
-        <div id="text">(Hello)</div>
+        <ul>
+            <li id="list">list</li>
+        </ul>
+        <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Поменять</button>
         <script>
             function changeHello() {
-                var text = document.getElementById("text");
-                text.innerHTML = '(Привет)';
-                return false;
+                var list = document.querySelector('#list');
+                var list2 = document.createElement('li');
+                list2.innerHTML = "Первый элемент списка";
+                list.parentNode.insertBefore(list2,list);
             }
         </script>
+
+
     </div>
     </form>
 

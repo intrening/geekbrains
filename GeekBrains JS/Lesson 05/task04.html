@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Lesson 05</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Lesson 05</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Задание 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task02.html">Задание 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task03.html">Задание 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task04.html">Задание 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task05.html">Задание 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task06.html">Задание 6</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h1 class="mt-5">Задание №4</h1>
+        <p class="lead">
+                Есть 2 инпута и знак вопроса между ними дальше равенство и поле результата, в итоге должно получиться<br> 
+                &lt;input type="text"> <span>?</span> &lt;input type="text"> = &lt;span>результат&lt;/span><br>
+                &lt;button>+&lt;/button> // при нажатии необходимо сложить<br>
+                &lt;button>-&lt;/button> // при нажатии необходимо вычесть<br>
+                &lt;button>&lt;/button> // при нажатии необходимо умножить<br>
+                &lt;button>/&lt;/button> // при нажатии необходимо делить<br>
+        </p>
+        <input type="text"> <span>?</span> <input type="text"> = <span id="res">результат</span><br>
+        <button onclick='return plus();'>+</button> // при нажатии необходимо сложить<br>
+        <button onclick='return minus();'>-</button> // при нажатии необходимо вычесть<br>
+        <button onclick='return mult();'>*</button> // при нажатии необходимо умножить<br>
+        <button onclick='return div();'>/</button> // при нажатии необходимо делить<br>
+        
+        <script>
+        function get_data (){
+            let v1 = +document.getElementsByTagName('input')[0].value;
+            let v2 = +document.getElementsByTagName('input')[1].value;
+            return [v1,v2];
+        }
+        function set_res (res){
+            return document.getElementById("res").innerHTML = res;
+        }
+
+        function plus(){
+            var v = get_data();
+            set_res(v[0]+v[1]);
+        }
+        function minus(){
+            var v = get_data();
+            set_res(v[0]-v[1]);
+        }
+        function mult(){
+            var v = get_data();
+            set_res(v[0]*v[1]);
+        }
+        function div(){
+            var v = get_data();
+            set_res(v[0]/v[1]);
+        }
+        </script>
+    </div>
+    </form>
+
+    </div>
+    </main>
+</body>
+
+</html>

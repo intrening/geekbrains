@@ -9,6 +9,9 @@
     float: left;
     width: 100px;
     height: 100px;
+    background-position: center; 
+    background-size: 60px;
+    background-repeat: no-repeat;
 }
 
 .black{
@@ -25,4 +28,41 @@
     text-align:center;
     font-size:300%;
     padding-top: 20px;
+}
+
+.P_B {
+    background-image: url('img/p_b.png');
+}
+.P_W {
+    background-image: url('img/p_w.png');
+}
+.B_B {
+    background-image: url('img/B_B.png');
+}
+.B_W {
+    background-image: url('img/B_W.png');
+}
+.K_B {
+    background-image: url('img/K_B.png');
+}
+.K_W {
+    background-image: url('img/K_W.png');
+}
+.N_B {
+    background-image: url('img/N_B.png');
+}
+.N_W {
+    background-image: url('img/N_W.png');
+}
+.R_B {
+    background-image: url('img/R_B.png');
+}
+.R_W {
+    background-image: url('img/R_W.png');
+}
+.Q_B {
+    background-image: url('img/Q_B.png');
+}
+.Q_W {
+    background-image: url('img/Q_W.png');
 }

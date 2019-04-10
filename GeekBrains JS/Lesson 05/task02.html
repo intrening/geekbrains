@@ -41,18 +41,24 @@
         </nav>
     </div>
     <div class="container">
-        <h1 class="mt-5">Задание №1</h1>
-        <p class="lead">Есть кнопка button рядом с ней есть текст (Hello) необходимо при нажатии на кнопку поменять
-            текст кнопки на (Привет)
+        <h1 class="mt-5">Задание №2</h1>
+        <p class="lead">Есть кнопка button рядом с ней есть тэг &lt;b>&lt;/b> (Hello) необходимо при нажатии на кнопку поменять тэг на &lt;h3>&lt;/h3>
         </p>
         <button type="submit" onclick='return changeHello();' class="btn btn-primary mb-2">Отправить</button>
+        <BR>
+        <b>(Hello)</b>
 
-        <div id="text">(Hello)</div>
         <script>
             function changeHello() {
-                var text = document.getElementById("text");
-                text.innerHTML = '(Привет)';
+                var textB = document.getElementsByTagName("b")[0];
+                var textH3 = document.createElement('h3');
+                textH3.innerHTML = textB.innerHTML;
+                
+                textB.parentNode.insertBefore(textH3,textB);
+                textB.parentNode.removeChild(textB);
                 return false;
+                
+                
             }
         </script>
     </div>
