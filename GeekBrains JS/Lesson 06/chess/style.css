@@ -1,0 +1,83 @@
+.line {
+    clear: both;
+    float: left;
+    width: 1000px;
+    height: 100px;
+}
+
+.cell {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.black {
+    background-color: black;
+    outline: 1px solid black;
+}
+
+.white {
+    background-color: white;
+    outline: 1px solid black;
+}
+
+.name {
+    text-align: center;
+    font-size: 300%;
+    padding-top: 20px;
+}
+
+.cell img {
+    width: 70%;
+    display: block;;
+    margin: 0 auto; 
+    padding: 10px 10px; 
+}
+
+.P_B {
+    content: url('img/p_b.png');
+}
+
+.P_W {
+    content: url('img/p_w.png');
+}
+
+.B_B {
+    content: url('img/B_B.png');
+}
+
+.B_W {
+    content: url('img/B_W.png');
+}
+
+.K_B {
+    content: url('img/K_B.png');
+}
+
+.K_W {
+    content: url('img/K_W.png');
+}
+
+.N_B {
+    content: url('img/N_B.png');
+}
+
+.N_W {
+    content: url('img/N_W.png');
+}
+
+.R_B {
+    content: url('img/R_B.png');
+}
+
+.R_W {
+    content: url('img/R_W.png');
+}
+
+.Q_B {
+    content: url('img/Q_B.png');
+}
+
+.Q_W {
+    content: url('img/Q_W.png');
+}
