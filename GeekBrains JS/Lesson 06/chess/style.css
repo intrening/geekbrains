@@ -27,11 +27,12 @@
     padding-top: 20px;
 }
 
-.cell img {
-    width: 70%;
-    display: block;;
-    margin: 0 auto; 
-    padding: 10px 10px; 
+.figure {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 10px;
+    cursor: pointer;
 }
 
 .P_B {
