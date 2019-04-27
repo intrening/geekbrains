@@ -1,0 +1,9 @@
+.card{
+    float: left;
+    width: 220px;
+    margin: 10px 10px;
+}
+
+.cart {
+    border: 1px solid rgba(0,0,0,.125);
+}
