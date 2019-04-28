@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>GeekBrains JS2 Lesson 02</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer> </script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="">GeekBrains JS2 Lesson 02</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../shop/index.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Фастфуд</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h1 class="mt-5">Фастфуд</h1>
+        <p class="lead">
+            Некая сеть фастфуда предлагает несколько видов гамбургеров:<BR>
+            ### Маленький (50 рублей, 20 калорий).<BR>
+            ### Большой (100 рублей, 40 калорий).<BR>
+            Гамбургер может быть с одним из нескольких видов начинок (обязательно):<BR>
+            ### С сыром (+10 рублей, +20 калорий).<BR>
+            ### С салатом (+20 рублей, +5 калорий).<BR>
+            ### С картофелем (+15 рублей, +10 калорий).<BR>
+            Дополнительно гамбургер можно посыпать приправой (+15 рублей, +0 калорий) и полить майонезом (+20 рублей, +5
+            калорий).<BR>
+            ### Напишите программу, рассчитывающую стоимость и калорийность гамбургера. Можно использовать примерную
+            архитектуру класса из методички, но можно использовать и свою.<BR>
+        </p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-9 catalog">
+                    <form class="form" id="form" onsubmit="return checkout(size.value, stuffing.value, pepper.checked, mai.checked);">
+                        <hr>
+                        <h3>Выберите гамбургер:</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="size" id="small" value="small" checked>
+                            <label class="form-check-label" for="small">
+                                Маленький (50 рублей, 20 калорий)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="size" id="big" value="big">
+                            <label class="form-check-label" for="big">
+                                Большой (100 рублей, 40 калорий)
+                            </label>
+                        </div>
+                        <hr>
+                        Начинка:
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stuffing" id="cheese" value="cheese"
+                                checked>
+                            <label class="form-check-label" for="cheese">
+                                С сыром (+10 рублей, +20 калорий)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stuffing" id="salad" value="salad">
+                            <label class="form-check-label" for="salad">
+                                С салатом (+20 рублей, +5 калорий)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stuffing" id="potato" value="potato">
+                            <label class="form-check-label" for="potato">
+                                С картофелем (+15 рублей, +10 калорий)
+                            </label>
+                        </div>
+                        <hr>
+                        Топпинги:
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="pepper" id="pepper">
+                            <label class="form-check-label" for="pepper">
+                                Приправа (+15 рублей, +0 калорий)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="mai" id="mai">
+                            <label class="form-check-label" for="mai">
+                                Майонез (+20 рублей, +5 калорий)
+                            </label>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+                    </form>
+                </div>
+                <div class="col-3 cart card-body"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
