@@ -1,0 +1,38 @@
+<font size="5">
+    <div class="webinar-date">
+        <div class="webinar-date-s"></div>
+    </div>
+</font>
+
+<script>
+    (function (doc) {
+        var utc_time = new Date();
+        var moskow_time = new Date(utc_time.getUTCFullYear(), utc_time.getUTCMonth(), utc_time.getUTCDate(),
+            utc_time.getUTCHours() + 3, utc_time.getUTCMinutes(), utc_time.getUTCSeconds());
+        var moskow_hour = moskow_time.getHours();
+        var webinar_hour = 0;
+        var when = 'Сегодня';
+        if (moskow_hour < 20) {
+            webinar_hour = 20;
+        } else {
+            webinar_hour = 24 + 20;
+            when = 'Завтра';
+        }
+        var webinar_date = new Date(moskow_time.getFullYear(), moskow_time.getMonth(), moskow_time.getDate(),
+            webinar_hour);
+        var day = webinar_date.getDate();
+        var hour = webinar_date.getHours();
+        var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября',
+            'октября', 'ноября', 'декабря'
+        ];
+        var month = months[webinar_date.getMonth()];
+
+        var string = `${when} ${day} ${month} в ${hour}:00 по Москве`;
+
+        var div_times = doc.querySelectorAll('.webinar-date-s');
+        for (var i = 0; i < div_times.length; i++) {
+            div_times[i].innerHTML = string;
+        }
+
+    })(document);
+</script>
