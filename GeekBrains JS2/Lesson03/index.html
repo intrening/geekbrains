@@ -3,109 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <script>
-        // let numPro = a => {
-        //     return new Promise((resolve, reject) => {
-        //         setTimeout(() => {
-        //             if (a) {
-        //                 const b = a * 10;
-        //                 resolve(b)
-        //             } else {
-        //                 reject('C а все плохо')
-        //             }
-        //         }, 3000);
-        //     })
-        // }
+    <header>
+        <div class="logo">E-shop</div>
+        <button class="btn-cart" type="button">Корзина</button>
+    </header>
+    <div></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9 catalog">
+                <!-- beforestart-->
+                <main>
+                    <!--afterstart-->
+                    <div class="products"></div>
+                    <!--beforeend-->
+                </main>
+                <!--afterend -->
+            </div>
+            <div class="col-3 cart card-body"></div>
+        </div>
+    </div>
 
-        // numPro(50)
-        //     .then (result => {
-        //         console.log(result);
-        //     })
-        //     .catch (error => {
-        //         console.log(error);
-        //     })
-
-        //     numPro()
-        //     .then (result => {
-        //         console.log(result);
-        //     })
-        //     .catch (error => {
-        //         console.log(error);
-        //     })
-
-        window.onload = () => {
-            let xhr = new XMLHttpRequest();
-            xhr.open('GET',
-                'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json',
-                true)
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4) {
-                    if (xhr.status == 200) {
-                        console.log('ОК: ', xhr.status, xhr.statusText);
-                        let obj = JSON.parse(xhr.responseText)
-                        console.log(obj)
-
-                    } else {
-                        console.log('ERR: ', xhr.status, xhr.statusText);
-                    }
-                }
-            }
-            xhr.send();
-
-
-            function httpGet(url) {
-
-                return new Promise(function (resolve, reject) {
-
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('GET', url, true);
-
-                    xhr.onload = function () {
-                        if (this.status == 200) {
-                            resolve(this.response);
-                        } else {
-                            var error = new Error(this.statusText);
-                            error.code = this.status;
-                            reject(error);
-                        }
-                    };
-
-                    xhr.onerror = function () {
-                        reject(new Error("Network Error"));
-                    };
-
-                    xhr.send();
-                });
-
-            }
-
-            httpGet("https://ob1.ru")
-                .then(
-                    response => console.log(`Fulfilled: ${response}`),
-                    error => console.log(`Rejected: ${error}`)
-                );
-
-
-
-            // const promise = new Promise((resolve, reject) => {
-            //     // Здесь пишем асинхронный код
-            //     // В случае успешного выполнения вызываем колбэк resolve()
-            //     // В случае ошибки вызываем reject()
-            // });
-            // promise.then(() => {
-            //         // Колбэк для resolve()
-            //     },
-            //     () => {
-            //         // Колбэк для reject()
-            //     });
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
